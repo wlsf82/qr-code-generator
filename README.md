@@ -34,7 +34,8 @@ npm run cy:open
 ## Project Structure
 
 - [cypress/e2e/qrCodeGen.cy.js](cypress/e2e/qrCodeGen.cy.js): Contains the E2E test that generates, downloads, and decodes a QR code.
-- [cypress.config.js](cypress.config.js): Cypress configuration including a custom task `decodeQRFromBase64` to verify QR code content using `jimp` and `jsqr`.
+- [cypress/support/tasks/index.js](cypress/support/tasks/index.js): Custom Cypress tasks (e.g., `decodeQRFromBase64`) for verifying QR code content using `jimp` and `jsqr`.
+- [cypress.config.js](cypress.config.js): Cypress configuration file.
 
 ## Author
 
