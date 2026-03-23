@@ -1,6 +1,5 @@
 const { defineConfig } = require('cypress')
-const { Jimp } = require('jimp')
-const jsQR = require('jsqr')
+const tasks = require('./cypress/support/tasks')
 
 module.exports = defineConfig({
   allowCypressEnv: false,
@@ -8,21 +7,7 @@ module.exports = defineConfig({
     fixturesFolder: false,
     supportFile: false,
     setupNodeEvents(on, config) {
-      on('task', {
-        decodeQRFromBase64(base64) {
-          return (async () => {
-            const buffer = Buffer.from(base64, 'base64')
-            const image = await Jimp.read(buffer)
-            const imageData = {
-              data: new Uint8ClampedArray(image.bitmap.data),
-              width: image.bitmap.width,
-              height: image.bitmap.height
-            }
-            const decoded = jsQR(imageData.data, imageData.width, imageData.height)
-            return decoded ? decoded.data : null
-          })()
-        }
-      })
+      tasks(on)
       return config
     },
   },
