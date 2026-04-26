@@ -16,8 +16,9 @@
   "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
-    "cypress": "^15.13.0",
+    "cypress": "^15.14.1",
     "jimp": "^1.6.0",
-    "jsqr": "^1.4.0"
+    "jsqr": "^1.4.0",
+    "limp": "^1.0.0"
   }
 }
