@@ -1,6 +1,6 @@
 describe('QR Code Generator', () => {
   beforeEach(() => {
-    cy.visit('https://v0-gerador-de-qr-code-sepia.vercel.app/')
+    cy.visit('https://v0-gerador-de-qr-code-tat.vercel.app/')
   })
 
   it('successfully generates a QR code, dowloads it, and access the website enconded in it', () => {

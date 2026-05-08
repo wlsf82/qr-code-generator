@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/wlsf82/qr-code-generator/actions/workflows/ci.yml/badge.svg)](https://github.com/wlsf82/qr-code-generator/actions/workflows/ci.yml)
 
-An automated E2E test suite using Cypress to validate the [QR Code Generator](https://v0-gerador-de-qr-code-sepia.vercel.app/) application.
+An automated E2E test suite using Cypress to validate the [QR Code Generator](https://v0-gerador-de-qr-code-tat.vercel.app/) application.
 
 ## Prerequisites
 
