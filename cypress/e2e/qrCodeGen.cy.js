@@ -3,7 +3,7 @@ describe('QR Code Generator', () => {
     cy.visit('https://v0-gerador-de-qr-code-sepia.vercel.app/')
   })
 
-  it('successfully generates a QR code, dowloads it, and access the website enconded on it', () => {
+  it('successfully generates a QR code, dowloads it, and access the website enconded in it', () => {
     cy.get('input[placeholder="https://exemplo.com"]').type('https://walmyr.dev')
     cy.contains('button', 'Gerar').click()
     cy.contains('button', 'Baixar QR Code').click()
