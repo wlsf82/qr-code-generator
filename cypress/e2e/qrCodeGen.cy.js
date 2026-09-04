@@ -18,7 +18,7 @@ describe('QR Code Generator', () => {
   })
 
   it('successfully generates a customized QR code (with a logo), downloads it, and access the website enconded in it', () => {
-    cy.get('input[placeholder="https://exemplo.com"]').type('https://cypresssimulator.com')
+    cy.get('input[placeholder="https://exemplo.com"]').type('https://talkingabouttesting.school')
     cy.get('#logo-upload').selectFile('./cypress/fixtures/cy-icon.png', { force: true })
     cy.contains('button', 'Gerar').click()
     cy.contains('button', 'Baixar QR Code').click()
@@ -28,7 +28,7 @@ describe('QR Code Generator', () => {
       .then(encodedUrl => encodedUrl)
       .then(url => {
         cy.visit(url)
-        cy.url().should('be.equal', 'https://cypresssimulator.com/')
+        cy.url().should('be.equal', 'https://talkingabouttesting.school/')
       })
   })
 })
